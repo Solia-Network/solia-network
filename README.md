@@ -181,7 +181,7 @@ Private mobile application for user-facing flows:
 - user activity and transaction experience
 
 Repository:
-`https://github.com/Solia-Network/solia_app.git`
+[github.com/Solia-Network/solia_app](https://github.com/Solia-Network/solia_app)
 
 #### 2. Solia Protocols
 
@@ -193,7 +193,7 @@ Private on-chain protocol layer for escrow execution:
 - dispute-triggered state transitions
 
 Repository:
-`https://github.com/Solia-Network/solia_protocols.git`
+[github.com/Solia-Network/solia_protocols](https://github.com/Solia-Network/solia_protocols)
 
 #### 3. Vera
 
@@ -205,7 +205,7 @@ Private dispute intelligence layer for structured conflict handling:
 - admin-facing decision support
 
 Repository:
-`https://github.com/Solia-Network/vera-solia.git`
+[github.com/Solia-Network/vera-solia](https://github.com/Solia-Network/vera-solia)
 
 ### Why Solana
 
@@ -326,6 +326,8 @@ For hackathon judging, this repo is meant to give clear public context around:
 - the system architecture
 - the escrow and dispute workflow
 - the broader Solia ecosystem across private implementation repositories
+
+Private repository access is available for Colosseum judges and invited reviewers upon request.
 
 ## Status
 
