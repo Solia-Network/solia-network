@@ -16,28 +16,58 @@
 - Escrow App: [escrow.solia.network](https://escrow.solia.network)
 - Documentation: [docs.solia.network](https://docs.solia.network)
 
-## At a Glance
-
-Solia is building escrow and settlement infrastructure for peer-to-peer transactions where trust cannot be assumed.
-
-Today, the Solia ecosystem already includes:
-
-- a public website for product positioning and project overview
-- a live escrow trading application on devnet
-- a documentation portal for product documentation and future API usage
-
-The escrow application currently supports order blocks for buying and selling and is already deployed live on devnet.
-
 ## Judge Checklist
 
 - Visit the public website: [www.solia.network](https://www.solia.network)
 - Open the live escrow app on devnet: [escrow.solia.network](https://escrow.solia.network)
 - Review the docs portal: [docs.solia.network](https://docs.solia.network)
+- Verify the deployed Solia escrow program on Solana Devnet
 - Evaluate the buy and sell order flow
 - Evaluate escrow-backed settlement flow
 - Evaluate dispute escalation and evidence attribution workflow
 - Evaluate the modular architecture across app, protocol, and Vera
 - Evaluate whether Solia solves a real trust problem for P2P and freelance payments
+
+## How to Test Solia
+
+Judges can test Solia through its live public surfaces and devnet deployment.
+
+### Public Links
+
+- Website: [https://www.solia.network](https://www.solia.network)
+- Escrow App: [https://escrow.solia.network](https://escrow.solia.network)
+- Docs: [https://docs.solia.network](https://docs.solia.network)
+
+### Devnet Program
+
+`SOLIA_ESCROW_PROGRAM_ID=J9GcXnuwFQZqpA7rSXSt44Dt4zhtyZ1RQPZdSYfXWkpt`
+
+Example verification command:
+
+```bash
+solana program show J9GcXnuwFQZqpA7rSXSt44Dt4zhtyZ1RQPZdSYfXWkpt --url devnet
+```
+
+### Judge Test Path
+
+1. Open `www.solia.network` to understand the product and context.
+2. Open `escrow.solia.network` to access the live escrow experience on devnet.
+3. Review the buy and sell order blocks.
+4. Walk through trade creation and escrow-backed transaction flow.
+5. Review the dispute handling path and evidence-driven resolution logic.
+6. Open `docs.solia.network` to inspect product and builder documentation.
+7. Verify the program deployment on Solana Devnet using the program ID above.
+
+## Demo Flow in 60 Seconds
+
+1. Start on `www.solia.network` to see Solia positioned as programmable escrow for global payments and P2P trade.
+2. Move to `escrow.solia.network` to enter the live product.
+3. Browse the order blocks for buying and selling.
+4. Create or inspect an escrow-backed trade.
+5. Follow the trade state from agreement to locked escrow to settlement.
+6. Review how a dispute can be initiated when a transaction fails or expectations break down.
+7. Show that disputes are supported by attributable evidence submission.
+8. Close on `docs.solia.network` to show that Solia is being built as a real platform, not only a demo surface.
 
 ## Why Solia Should Win
 
@@ -47,42 +77,42 @@ The escrow application currently supports order blocks for buying and selling an
 - The architecture is modular and credible: user experience, on-chain protocol, and dispute intelligence are clearly separated.
 - Solana is used for the parts it is actually good at: fast settlement, low fees, and programmable on-chain escrow state.
 
-## What Solia Is
+## Product Overview
 
 Solia Network is a non-custodial escrow protocol built on Solana for peer-to-peer transactions where trust is weak and transaction risk is high.
 
 Instead of sending funds directly to another party and hoping the transaction completes fairly, users lock funds into escrow. Funds are only released when trade conditions are met, both parties confirm completion, or a dispute is resolved through a structured workflow.
 
-## The Problem
+### The Problem
 
 Peer-to-peer transactions still break down in the same places:
 
-- Buyers fear paying before delivery.
-- Sellers fear delivering before payment.
-- Existing escrow systems are often centralized, opaque, slow, or expensive.
-- Disputes are usually handled manually with weak evidence trails and poor accountability.
+- buyers fear paying before delivery
+- sellers fear delivering before payment
+- existing escrow systems are often centralized, opaque, slow, or expensive
+- disputes are usually handled manually with weak evidence trails and poor accountability
 
 This is especially painful in freelance work, informal digital commerce, service delivery, and cross-border peer transactions.
 
-## The Solia Approach
+### The Solia Approach
 
 Solia replaces trust in the counterparty with verifiable escrow logic on Solana.
 
 Core design goals:
 
-- Non-custodial fund locking
-- Clear trade state transitions
-- Mutual confirmation before settlement
-- Structured evidence submission during disputes
-- Admin-led resolution workflow with Vera assisting dispute analysis
+- non-custodial fund locking
+- clear trade state transitions
+- mutual confirmation before settlement
+- structured evidence submission during disputes
+- admin-led resolution workflow with Vera assisting dispute analysis
 
-## Product Surfaces
+### Product Surfaces
 
-### Main Website
+#### Main Website
 
 `www.solia.network` is the public entry point for Solia. It presents the product thesis clearly: programmable escrow for global payments, P2P trade, and freelance settlement.
 
-### Escrow Trading App
+#### Escrow Trading App
 
 `escrow.solia.network` is the live product surface for escrow trades.
 
@@ -92,11 +122,11 @@ Current known scope:
 - live deployment on devnet
 - escrow-driven trade interaction flow
 
-### Documentation Portal
+#### Documentation Portal
 
 `docs.solia.network` contains Solia documentation for builders, product understanding, and future API usage.
 
-## How It Works
+### How It Works
 
 1. A trade is created with agreed terms between buyer and seller.
 2. Funds are locked into escrow on-chain.
@@ -107,14 +137,7 @@ Current known scope:
 7. Vera helps structure and analyze the dispute workflow.
 8. Resolution determines whether funds are released, refunded, or otherwise settled.
 
-## Current Live Status
-
-- Public website is live
-- Escrow application is live on devnet
-- Documentation portal is live
-- Solia is actively being developed for the Colosseum Hackathon 2026
-
-## Architecture Diagram
+### Architecture Diagram
 
 ```mermaid
 flowchart TD
@@ -144,11 +167,11 @@ flowchart TD
     D -. protocol understanding .-> P
 ```
 
-## Architecture
+### Architecture
 
 Solia is organized into three connected components:
 
-### 1. Solia App
+#### 1. Solia App
 
 Private mobile application for user-facing flows:
 
@@ -160,7 +183,7 @@ Private mobile application for user-facing flows:
 Repository:
 `https://github.com/Solia-Network/solia_app.git`
 
-### 2. Solia Protocols
+#### 2. Solia Protocols
 
 Private on-chain protocol layer for escrow execution:
 
@@ -172,7 +195,7 @@ Private on-chain protocol layer for escrow execution:
 Repository:
 `https://github.com/Solia-Network/solia_protocols.git`
 
-### 3. Vera
+#### 3. Vera
 
 Private dispute intelligence layer for structured conflict handling:
 
@@ -183,6 +206,29 @@ Private dispute intelligence layer for structured conflict handling:
 
 Repository:
 `https://github.com/Solia-Network/vera-solia.git`
+
+### Why Solana
+
+Solana is a strong fit for Solia because it enables:
+
+- fast transaction finality for real-time trade flows
+- low fees for frequent escrow interactions
+- on-chain state management for dispute-aware settlement logic
+- scalable infrastructure for high-volume P2P transaction networks
+
+### What Makes Solia Different
+
+- Non-custodial by design: funds are controlled by protocol logic, not a centralized intermediary.
+- Dispute-aware escrow: dispute handling is built into the product flow, not bolted on later.
+- Evidence-first resolution: disputes are structured around attributable submissions, reducing ambiguity.
+- Modular system design: app, protocol, and dispute intelligence are separated for clarity and extensibility.
+
+## Current Live Status
+
+- Public website is live
+- Escrow application is live on devnet
+- Documentation portal is live
+- Solia is actively being developed for the Colosseum Hackathon 2026
 
 ## Current Progress
 
@@ -197,67 +243,18 @@ The following parts are already implemented in the current system:
 - admin dispute initialization and queue handling
 - Vera integration for structured dispute analysis
 
-## Why Solana
+## Proof of Execution
 
-Solana is a strong fit for Solia because it enables:
-
-- fast transaction finality for real-time trade flows
-- low fees for frequent escrow interactions
-- on-chain state management for dispute-aware settlement logic
-- scalable infrastructure for high-volume P2P transaction networks
-
-## What Makes Solia Different
-
-- Non-custodial by design: funds are controlled by protocol logic, not a centralized intermediary.
-- Dispute-aware escrow: dispute handling is built into the product flow, not bolted on later.
-- Evidence-first resolution: disputes are structured around attributable submissions, reducing ambiguity.
-- Modular system design: app, protocol, and dispute intelligence are separated for clarity and extensibility.
-
-## Repository Scope
-
-This repository serves as the public project overview for Solia Network.
-
-Because the product is still in active development, the main implementation repositories are private at this stage:
-
-- `solia_app`
-- `solia_protocols`
-- `vera-solia`
-
-For hackathon judging, this repo is meant to give clear public context around:
-
-- the product vision
-- the live surfaces already available
-- the system architecture
-- the escrow and dispute workflow
-- the broader Solia ecosystem across private implementation repositories
-
-## Why This Matters
-
-Solia is not trying to be just another wallet-connected payments app.
-
-It is building trust-minimized transaction infrastructure for real-world coordination problems:
-
-- buyer and seller trust
-- milestone-based settlement
-- escrow-backed transactions
-- evidence-driven dispute handling
-- programmable settlement rails on Solana
-
-## Demo and Judge Notes
-
-Judges should evaluate Solia as a full escrow workflow, not just a smart contract:
-
-- live product presence across website, app, and docs
-- trade agreement
-- buy and sell order flow
-- escrow locking
-- confirmation-based settlement
-- dispute escalation
-- evidence attribution
-- Vera-assisted dispute analysis
-- admin resolution path
-
-This is the core product thesis: bring trust-minimized escrow and structured dispute handling into one Solana-native system.
+- Public website is live at [https://www.solia.network](https://www.solia.network)
+- Live escrow application is running at [https://escrow.solia.network](https://escrow.solia.network)
+- Documentation portal is live at [https://docs.solia.network](https://docs.solia.network)
+- Solia escrow program is deployed on Solana Devnet
+- Program ID: `J9GcXnuwFQZqpA7rSXSt44Dt4zhtyZ1RQPZdSYfXWkpt`
+- Buy and sell order block flow is already present in the escrow product surface
+- Dispute workflow has been implemented and tested with real scenarios
+- Evidence submission includes explicit attribution by role
+- Admin dispute queue and initialization workflow are implemented
+- Vera is integrated into the structured dispute analysis flow
 
 ## Screenshots
 
@@ -311,6 +308,24 @@ Caption: Solia documentation portal for builders, integration guidance, and futu
 
 Placeholder path:
 `./assets/screenshots/docs-portal.png`
+
+## Repository Scope
+
+This repository serves as the public project overview for Solia Network.
+
+Because the product is still in active development, the main implementation repositories are private at this stage:
+
+- `solia_app`
+- `solia_protocols`
+- `vera-solia`
+
+For hackathon judging, this repo is meant to give clear public context around:
+
+- the product vision
+- the live surfaces already available
+- the system architecture
+- the escrow and dispute workflow
+- the broader Solia ecosystem across private implementation repositories
 
 ## Status
 
