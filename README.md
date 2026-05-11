@@ -12,15 +12,15 @@ It combines on-chain escrow, a live freelance product surface, and structured di
 
 ## Live Product
 
-- Freelance app: `https://freelance.solia.network`
-- Main website: `https://www.solia.network`
-- Docs: `https://docs.solia.network`
+- Freelance app: [freelance.solia.network](https://freelance.solia.network)
+- Main website: [www.solia.network](https://www.solia.network)
+- Docs: [docs.solia.network](https://docs.solia.network)
 
 ## Judge Quick Start
 
 If you only have a few minutes, use this path:
 
-1. Open `https://freelance.solia.network`
+1. Open [freelance.solia.network](https://freelance.solia.network)
 2. Connect and enter the freelance workspace
 3. Inspect the deal lifecycle:
    - create
@@ -28,7 +28,7 @@ If you only have a few minutes, use this path:
    - fund
    - deliver
    - release or dispute
-4. Open `https://docs.solia.network` for supporting context
+4. Open [docs.solia.network](https://docs.solia.network) for supporting context
 5. Use this repo to navigate the implementation repositories
 
 ## Submission Focus
@@ -80,18 +80,18 @@ Solana is a strong fit because Solia needs:
 
 Solia is organized across three practical layers:
 
-1. Product layer: `freelance.solia.network` and the end-user workspace
+1. Product layer: [freelance.solia.network](https://freelance.solia.network) and the end-user workspace
 2. Protocol and service layer: escrow execution, API orchestration, dispute records, and Solana-connected actions
-3. Public layer: `www.solia.network`, `docs.solia.network`, and this public overview repo
+3. Public layer: [www.solia.network](https://www.solia.network), [docs.solia.network](https://docs.solia.network), and this public overview repo
 
 ### Flow Summary
 
-1. A user starts at `www.solia.network` or directly enters `freelance.solia.network`.
+1. A user starts at [www.solia.network](https://www.solia.network) or directly enters [freelance.solia.network](https://freelance.solia.network).
 2. The freelance frontend handles onboarding, workspace access, deal creation, and participant actions.
 3. The backend coordinates deal state, validation, uploads, dispute records, and action routing.
 4. Escrow-critical actions such as funding, cancel, and release resolve against the Solana execution layer.
 5. Disputes and operational notices stay attached to the same workspace so deal state and evidence stay coherent.
-6. `docs.solia.network` supports product understanding and technical review.
+6. [docs.solia.network](https://docs.solia.network) supports product understanding and technical review.
 
 ### Mermaid Diagram
 
@@ -116,14 +116,16 @@ flowchart TD
 
 ## Component Repositories
 
-The implementation is split across two focused repositories:
+The implementation is split across two focused repositories, and the current hackathon work lives on the active frontend and infrastructure branches below:
 
 ### Freelance Frontend
-- Repo: `https://github.com/SoliaNetwork/solia-freelance-ui`
+- Repo: [SoliaNetwork/solia-freelance-ui](https://github.com/SoliaNetwork/solia-freelance-ui)
+- Active branch: [`main-frontend-v1.2`](https://github.com/SoliaNetwork/solia-freelance-ui/tree/main-frontend-v1.2)
 - Responsibility: onboarding, dashboard, workspace flows, deal UX, dispute UX, and wallet integration
 
-### Protocol and Backend
-- Repo: `https://github.com/Solia-Network/solia_contracts`
+### Protocol and Infrastructure
+- Repo: [Solia-Network/solia_protocols](https://github.com/Solia-Network/solia_protocols)
+- Active branch: [`main-infra-v1.2`](https://github.com/Solia-Network/solia_protocols/tree/main-infra-v1.2)
 - Responsibility: escrow execution, API orchestration, deal state, dispute records, evidence handling, and Solana-connected actions
 
 ## Visual Proof
@@ -174,9 +176,9 @@ If the PNG files are not added yet, the placeholder markdown files in `screensho
 
 - submission focus: freelance escrow on Solana
 - environment: active product testing
-- main product URL: `https://freelance.solia.network`
-- public overview URL: `https://www.solia.network`
+- main product URL: [freelance.solia.network](https://freelance.solia.network)
+- public overview URL: [www.solia.network](https://www.solia.network)
 
 ## Review Note
 
-Start with `freelance.solia.network`, then use this repo to navigate the implementation repositories.
+Start with [freelance.solia.network](https://freelance.solia.network), then use this repo to navigate the implementation repositories and active branches.
